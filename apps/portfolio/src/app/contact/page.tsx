@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 function Page() {
   const defaultValues = {
@@ -35,10 +36,30 @@ function Page() {
       body: JSON.stringify(data),
     });
 
-    console.log(status);
-
     if (status == 204) {
       form.reset();
+      toast("Submitted Succesfully", {
+        description: <>I will reach out to you via {data.contact} soon!</>,
+        // action: {
+        // label: "Undo",
+        // onClick: () => console.log("Undo"),
+        // },
+      });
+    } else if (status == 404) {
+      toast("Unknown Error", {
+        description: <>Hmm, something went wrong! Try again?</>,
+        // action: {
+        // label: "Undo",
+        // onClick: () => console.log("Undo"),
+        // },
+      });
+    } else if (status == 429) {
+      toast("Rate Limit", {
+        description: (
+          <>You have been Rate-Limited. Please try again in 5 minutes.</>
+        ),
+        
+      });
     }
   };
 

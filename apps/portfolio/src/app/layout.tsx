@@ -7,6 +7,7 @@ import { KeyboardControlProvider } from "@/contexts/KeyboardControls";
 import { Theme, ThemeControllerProvider } from "@/contexts/ThemeController";
 import { cookies } from "next/headers";
 import Script from "next/script";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Header />
           <main className="h-full w-full flex overflow-hidden flex-1">
             {children}
+            <Toaster />
           </main>
         </KeyboardControlProvider>
       </ThemeControllerProvider>
