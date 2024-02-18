@@ -16,11 +16,18 @@ export default function ThemeToggle(props: IThemeToggleProps) {
   const keys = useKeyboardControls();
 
   React.useEffect(() => {
-    if (keys.has("t") && keys.has("shift")) toggleTheme();
+    if (keys.has("t") && keys.has("shift")) {
+      toggleTheme();
+      // @ts-ignore
+      umami.track("Toggle Theme", { theme, type: "shortcut" });
+    }
   }, [keys]);
 
   return (
     <Switch
+      data-umami-event="Toggle Theme"
+      data-umami-event-theme={theme}
+      data-umami-event-type="click"
       className={props.className}
       checked={theme == "dark"}
       onCheckedChange={toggleTheme}
