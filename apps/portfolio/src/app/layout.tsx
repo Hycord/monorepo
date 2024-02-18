@@ -24,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className=" no-scrollbar">
       <Script
-        defer
-        data-domain="hycord.is-a.dev"
-        src="https://analytics.is-a.dev/js/script.js"
+        async
+        src="https://a.masen.dev/script.js"
+        data-website-id="01c04cbe-6ac9-48c0-b72b-4aaa13ee0f8c"
       ></Script>
       <ThemeControllerProvider
         defaultTheme={(cookies().get("theme")?.value ?? "dark") as Theme}
