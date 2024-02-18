@@ -1,0 +1,33 @@
+{
+  "name": "hycord",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "start": "turbo start",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "pub": "turbo run build --filter @hycord/* && turbo run lint && pnpm run c && pnpm run cv && pnpm run cpub",
+    "c": "changeset",
+    "cv": "changeset version",
+    "cpub": "changeset publish",
+    "a": "cd ./apps/portfolio && pnpm dlx shadcn-ui@latest add -- "
+    
+  },
+  "devDependencies": {
+    "@hycord/eslint-config": "workspace:*",
+    "@hycord/typescript-config": "workspace:*",
+    "turbo": "latest",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.4"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
+  }
+}

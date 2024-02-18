@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 170 51% 98%;
+    --foreground: 170 14% 3%;
+    --muted: 170 40% 91%;
+    --muted-foreground: 170 4% 32%;
+    --popover: 170 51% 99%;
+    --popover-foreground: 170 14% 1%;
+    --card: 170 51% 99%;
+    --card-foreground: 170 14% 1%;
+    --border: 170 7% 92%;
+    --input: 170 7% 92%;
+    --primary: 170 51% 55%;
+    --primary-foreground: 170 51% 15%;
+    --secondary: 50 100% 70%; /* Soft yellow as the new secondary color */
+    --accent: 170 8% 83%;
+    --accent-foreground: 170 8% 73%;
+    --destructive: 0 51.09% 55.1%;
+    --destructive-foreground: 0 50.65% 15.1%;
+    --ring: 170 51% 55%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 170 51% 2%;
+    --foreground: 170 14% 97%;
+    --muted: 170 40% 9%;
+    --muted-foreground: 170 4% 68%;
+    --popover: 170 51% 3%;
+    --popover-foreground: 170 14% 98%;
+    --card: 170 51% 3%;
+    --card-foreground: 170 14% 98%;
+    --border: 170 7% 12%;
+    --input: 170 7% 12%;
+    --primary: 170 51% 55%;
+    --primary-foreground: 170 51% 15%;
+    --secondary-foreground: 50 50% 20%; /* Corresponding foreground color */
+    --accent: 170 8% 13%;
+    --accent-foreground: 170 8% 73%;
+    --destructive: 0 51.09% 55.1%;
+    --destructive-foreground: 0 50.65% 15.1%;
+    --ring: 170 51% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 128px;
+  height: 128px;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  background-color: var(--primary-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.key {
+  @apply py-2 px-4 rounded-md bg-accent text-accent-foreground w-fit inline-block;
+}
+
+.glass-1 {
+  @apply bg-opacity-10 backdrop-blur-sm drop-shadow-sm;
+}
+.glass-2 {
+  @apply bg-opacity-20 backdrop-blur-md drop-shadow-md;
+}
+.glass-3 {
+  @apply bg-opacity-30 backdrop-blur-lg drop-shadow-lg;
+}

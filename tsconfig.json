@@ -1,0 +1,3 @@
+{
+  "extends": "@hycord/typescript-config/base.json"
+}

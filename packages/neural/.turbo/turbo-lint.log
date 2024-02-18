@@ -1,0 +1,5 @@
+
+
+> @hycord/neural@0.0.0 lint /home/hycord/code/hycord/packages/neural
+> eslint . --max-warnings 0
+

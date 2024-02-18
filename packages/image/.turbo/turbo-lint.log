@@ -1,0 +1,5 @@
+
+
+> @hycord/image@0.0.0 lint /home/hycord/code/hycord/packages/image
+> eslint . --max-warnings 0
+

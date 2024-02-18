@@ -1,0 +1,5 @@
+
+
+> @hycord/logger@0.1.0 lint /home/hycord/code/hycord/packages/logger
+> eslint . --max-warnings 0
+
