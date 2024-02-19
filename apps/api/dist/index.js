@@ -55,6 +55,15 @@ var neural_default = async (server2, options, done) => {
 // src/routes/index.ts
 var routes_default = async (server2, options, done) => {
   await server2.register(neural_default);
+  server2.get("/", async (req, res) => {
+    res.send(
+      new Response(
+        JSON.stringify({
+          message: "Welcome to my API! I will have documentation available soon under https://masen.dev/api/docs"
+        })
+      )
+    );
+  });
   done();
 };
 
