@@ -45,7 +45,7 @@ function Header() {
             buttonVariants({ variant: "link" }),
             "text-inherit text-lg"
           )}
-          href="/resume.pdf"
+          href="/resume"
           tabIndex={4}
         >
           Resume
@@ -87,7 +87,7 @@ function Header() {
             <SheetClose asChild>
               <Link
                 className="p-2 hover:underline w-full flex items-center justify-center"
-                href="/resume.pdf"
+                href="/resume"
               >
                 Resume
               </Link>
