@@ -1,4 +1,4 @@
-import { random } from '@hycord/math';
+import { random } from "@hycord/math";
 
 export class FeedForwardNetworkLayer {
   private _inputs: number[];
@@ -19,6 +19,36 @@ export class FeedForwardNetworkLayer {
     this.randomize();
   }
 
+  public toData() {
+    return {
+      inputCount: this._inputs.length,
+      outputCount: this.outputs.length,
+      weights: this._weights,
+      biases: this._biases,
+    };
+  }
+
+  public toDataString() {
+    return JSON.stringify(this.toData());
+  }
+
+  public static fromData(data: any) {
+    const { inputCount, outputCount, weights, biases } = data as {
+      inputCount: number;
+      outputCount: number;
+      weights: number[][];
+      biases: number[];
+    };
+
+    const layer = new FeedForwardNetworkLayer(0, 0);
+    layer._inputs = new Array(inputCount).fill(0);
+    layer.outputs = new Array(outputCount).fill(0);
+    layer._weights = weights;
+    layer._biases = biases;
+
+    return layer;
+  }
+
   private randomize(): void {
     for (let i = 0; i < this._weights.length; i++) {
       for (let j = 0; j < this._weights[0]!.length; j++) {
@@ -32,7 +62,9 @@ export class FeedForwardNetworkLayer {
 
   public feedForward(inputs: number[]): number[] {
     if (this._inputs.length !== inputs.length) {
-      throw new Error('Invalid input length');
+      throw new Error(
+        `Invalid input length (${this._inputs.length} ${inputs.length})`
+      );
     }
 
     for (let i = 0; i < this._inputs.length; i++) {
@@ -54,9 +86,13 @@ export class FeedForwardNetworkLayer {
     return 1 / (1 + Math.exp(-x));
   }
 
+  public get inputSize() {
+    return this._inputs.length;
+  }
+
   public backwardPass(
     nextLayerError: number[],
-    learningRate: number,
+    learningRate: number
   ): number[] {
     const errors: number[] = new Array(this._inputs.length).fill(0);
 

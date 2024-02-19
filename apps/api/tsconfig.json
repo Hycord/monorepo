@@ -1,0 +1,11 @@
+{
+  "extends": "@hycord/typescript-config/base.json",
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+   "esModuleInterop": true,
+   "allowArbitraryExtensions": true 
+  },
+  "exclude": ["node_modules"]
+}

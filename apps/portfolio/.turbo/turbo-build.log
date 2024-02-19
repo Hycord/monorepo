@@ -4,120 +4,31 @@
 > next build
 
   [1m[38;2;173;127;168m ▲ Next.js 14.1.0[39m[22m
+   - Environments: .env.local
 
  [37m[1m [22m[39m Creating an optimized production build ...
  [32m[1m✓[22m[39m Compiled successfully
-[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G[?25h
-[36m./src/app/layout.tsx[39m
-[33m42[39m:[33m7[39m  [33m[1mWarning[22m[39m: 'ThemeWrapper' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-[33m42[39m:[33m25[39m  [33m[1mWarning[22m[39m: 'children' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/app/page.tsx[39m
-[33m2[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'BoidHomeSection' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m3[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'useTheme' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/components/canvases/BoidCanvas.tsx[39m
-[33m2[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'useCanvas' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m4[39m:[33m16[39m  [33m[1mWarning[22m[39m: 'BoidEdgeType' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m5[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'Point' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m8[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'Vector2D' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m8[39m:[33m20[39m  [33m[1mWarning[22m[39m: 'mean' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m8[39m:[33m34[39m  [33m[1mWarning[22m[39m: 'standardDeviation' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m14[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'useRef' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m19[39m:[33m8[39m  [33m[1mWarning[22m[39m: 'useKeyDown' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m20[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'Card' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m20[39m:[33m16[39m  [33m[1mWarning[22m[39m: 'CardContent' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m20[39m:[33m29[39m  [33m[1mWarning[22m[39m: 'CardHeader' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m27[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'Checkbox' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m29[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'DicesIcon' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m33[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'Trash' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m34[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'TrashIcon' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m36[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'Separator' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m59[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'frame' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-[33m108[39m:[33m25[39m  [33m[1mWarning[22m[39m: 'i' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/components/canvases/BoidHomeSection.tsx[39m
-[33m2[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'useEffect' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m2[39m:[33m21[39m  [33m[1mWarning[22m[39m: 'useState' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m3[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'BoidCanvas' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m6[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'className' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/components/control/ThemeToggle.tsx[39m
-[33m7[39m:[33m8[39m  [33m[1mWarning[22m[39m: 'useKeyDown' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/components/navigation/Header.tsx[39m
-[33m6[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'Checkbox' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/components/ui/Flipper.tsx[39m
-[33m23[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'hide' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-[33m40[39m:[33m9[39m  [33m[1mWarning[22m[39m: 'flipTo' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/contexts/ThemeController.tsx[39m
-[33m2[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'useLocalStorage' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m4[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'defaultMaxListeners' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m5[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'cookies' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m10[39m:[33m3[39m  [33m[1mWarning[22m[39m: 'useEffect' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m36[39m:[33m34[39m  [33m[1mWarning[22m[39m: 'v' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/hooks/useCanvas.ts[39m
-[33m5[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'viewport' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m5[39m:[33m30[39m  [33m[1mWarning[22m[39m: 'frameNumber' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/hooks/useDebounce.ts[39m
-[33m3[39m:[33m36[39m  [33m[1mWarning[22m[39m: 'data' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m7[39m:[33m27[39m  [33m[1mWarning[22m[39m: 'NodeJS' is not defined.  [90m[1mno-undef[22m[39m
-
-[36m./src/hooks/useInterval.ts[39m
-[33m20[39m:[33m25[39m  [33m[1mWarning[22m[39m: 'NodeJS' is not defined.  [90m[1mno-undef[22m[39m
-
-[36m./src/hooks/useKeyDown.ts[39m
-[33m5[39m:[33m32[39m  [33m[1mWarning[22m[39m: 'e' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/hooks/useLocalStorage.ts[39m
-[33m13[39m:[33m27[39m  [33m[1mWarning[22m[39m: 'v' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/hooks/useViewport.ts[39m
-[33m2[39m:[33m16[39m  [33m[1mWarning[22m[39m: 'sum' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m3[39m:[33m55[39m  [33m[1mWarning[22m[39m: 'useState' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m6[39m:[33m10[39m  [33m[1mWarning[22m[39m: 'viewport' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m7[39m:[33m12[39m  [33m[1mWarning[22m[39m: 'deltaTime' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m7[39m:[33m31[39m  [33m[1mWarning[22m[39m: 'view' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m30[39m:[33m36[39m  [33m[1mWarning[22m[39m: 'NodeJS' is not defined.  [90m[1mno-undef[22m[39m
-
-[36m./src/hooks/useWindowSize.ts[39m
-[33m1[39m:[33m8[39m  [33m[1mWarning[22m[39m: 'React' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/lib/boid.ts[39m
-[33m233[39m:[33m11[39m  [33m[1mWarning[22m[39m: 'seg' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/lib/geometry.ts[39m
-[33m4[39m:[33m14[39m  [33m[1mWarning[22m[39m: 'MPolygon' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m5[39m:[33m14[39m  [33m[1mWarning[22m[39m: 'MSegment' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-[33m126[39m:[33m7[39m  [33m[1mWarning[22m[39m: 'lineWidth' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-[33m128[39m:[33m7[39m  [33m[1mWarning[22m[39m: 'strokeStyle' is assigned a value but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36m./src/lib/viewport.ts[39m
-[33m71[39m:[33m23[39m  [33m[1mWarning[22m[39m: 'ctx' is defined but never used.  [90m[1mno-unused-vars[22m[39m
-
-[36minfo[39m  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
-[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Linting and checking validity of types     [32m[1m✓[22m[39m Linting and checking validity of types 
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/10)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/10)  [36m[=   ][39m[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (10/10) 
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m [31m[1m⨯[22m[39m ESLint: ESLint configuration in .eslintrc.js » @hycord/eslint-config/next.js is invalid: 	- Unexpected top-level property "tsconfigRootDir".  Referenced from: /home/hycord/code/monorepo/apps/portfolio/.eslintrc.js
+[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Linting and checking validity of types     [32m[1m✓[22m[39m Linting and checking validity of types 
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/11)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/11)  [36m[=   ][39m  [37m[1m [22m[39m Generating static pages (1/11) 
+[2K[1G[1A[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (11/11) 
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
 [2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
 [4mRoute (app)[24m                              [4mSize[24m     [4mFirst Load JS[24m
-┌ λ /                                    28.3 kB         [37m[1m123 kB[22m[39m
+┌ λ /                                    29.3 kB         [37m[1m124 kB[22m[39m
 ├ λ /_not-found                          883 B          [37m[1m85.1 kB[22m[39m
-├ λ /arianna                             6.21 kB        [37m[1m97.3 kB[22m[39m
-├ λ /contact                             175 B          [37m[1m91.2 kB[22m[39m
-├ λ /projects                            140 B          [37m[1m84.4 kB[22m[39m
-├ λ /resume                              140 B          [37m[1m84.4 kB[22m[39m
+├ λ /contact                             24.3 kB         [37m[1m124 kB[22m[39m
+├ λ /contact/submit                      0 B                [37m[1m0 B[22m[39m
+├ λ /neural/classify/digits              0 B                [37m[1m0 B[22m[39m
+├ λ /projects                            175 B          [37m[1m91.2 kB[22m[39m
+├ λ /resume                              136 B          [37m[1m84.4 kB[22m[39m
 └ λ /set-theme                           0 B                [37m[1m0 B[22m[39m
 + First Load JS shared by all            [37m[1m84.2 kB[22m[39m
-  ├ chunks/14720756-6aef86b9d57e1498.js  53.4 kB
-  ├ chunks/726-269496d2d1a68ea4.js       28.9 kB
-  └ other shared chunks (total)          1.97 kB
+  ├ chunks/14720756-4c8b565a5842d98e.js  53.4 kB
+  ├ chunks/726-bc520f6f48b42daa.js       28.9 kB
+  └ other shared chunks (total)          1.94 kB
 
 
 λ  (Dynamic)  server-rendered on demand using Node.js

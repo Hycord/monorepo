@@ -1,7 +1,22 @@
 declare class FeedForwardNeuralNetwork {
     private _layers;
-    constructor(layers: number[]);
+    private _softmax;
+    constructor(layers: number[], softmax?: boolean);
+    static fromData({ config: { softmax }, layers, }: {
+        config: {
+            softmax: boolean;
+        };
+        layers: {
+            inputCount: number;
+            outputCount: number;
+            weights: number[][];
+            biases: number[];
+        }[];
+    }): FeedForwardNeuralNetwork;
+    toData(): string;
     feedForward(inputs: number[]): number[];
+    private softmax;
+    get inputSize(): number;
     train(inputs: number[], targets: number[], learningRate: number): void;
     private calculateError;
 }

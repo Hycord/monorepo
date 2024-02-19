@@ -14,6 +14,7 @@ module.exports = {
     React: true,
     JSX: true,
   },
+  tsconfigRootDir: __dirname,
   env: {
     node: true,
     browser: true,

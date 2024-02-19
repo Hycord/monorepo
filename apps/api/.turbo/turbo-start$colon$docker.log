@@ -1,0 +1,7 @@
+
+
+> api@1.0.15 start:docker /home/hycord/code/monorepo/apps/api
+> node ./dist/index.js
+
+loading from data
+{"level":30,"time":1708340899722,"pid":197042,"hostname":"MasensLaptop","msg":"Server listening at http://127.0.0.1:3000"}

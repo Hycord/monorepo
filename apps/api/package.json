@@ -1,0 +1,28 @@
+{
+  "name": "api",
+  "version": "1.0.15",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "start": "node ./dist/index.js",
+    "start:docker": "node ./dist/index.js",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "bun --watch ./src/index.ts"
+  },
+  "dependencies": {
+    "@hycord/math": "workspace:*",
+    "@hycord/neural": "workspace:*",
+    "fastify": "^4.26.1"
+  },
+  "devDependencies": {
+    "@hycord/eslint-config": "workspace:*",
+    "@hycord/typescript-config": "workspace:*",
+    "@types/bun": "^1.0.5",
+    "@types/eslint": "^8.56.1",
+    "@types/node": "^20.10.6",
+    "eslint": "^8.56.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}

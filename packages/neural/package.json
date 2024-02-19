@@ -20,9 +20,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@hycord/math": "workspace:*",
-    "@hycord/logger": "workspace:*",
-    "@hycord/image": "workspace:*"
+    "@hycord/logger": "workspace:^",
+    "@hycord/math": "workspace:*"
   },
   "repository": {
     "type": "git",

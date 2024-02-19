@@ -25,6 +25,7 @@ module.exports = {
       },
     },
   },
+  tsconfigRootDir: __dirname,
   ignorePatterns: [
     // Ignore dotfiles
     ".*.js",

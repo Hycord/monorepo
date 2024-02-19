@@ -8,6 +8,7 @@
       ],
       "cache": false
     },
+    "start:docker":{},
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]

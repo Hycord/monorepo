@@ -1,9 +1,8 @@
-import chalk from 'chalk';
-
+type Color = string | [number, number, number];
 declare class Logger {
     private title?;
     constructor(title?: string);
-    _log([color, style]: (typeof chalk)[], title: string | undefined, message: unknown): void;
+    _log([c, style]: Color[], title: string | undefined, message: unknown): void;
     log(message: unknown, title?: string): void;
     error(message: unknown, title?: string): void;
     warn(message: unknown, title?: string): void;

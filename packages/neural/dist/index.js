@@ -65,7 +65,7 @@ function deepEqual(x, y) {
 
 // src/FeedForwardNetworkLayer.ts
 var import_math = require("@hycord/math");
-var FeedForwardNetworkLayer = class {
+var FeedForwardNetworkLayer = class _FeedForwardNetworkLayer {
   _inputs;
   outputs;
   _biases;
@@ -80,6 +80,26 @@ var FeedForwardNetworkLayer = class {
     }
     this.randomize();
   }
+  toData() {
+    return {
+      inputCount: this._inputs.length,
+      outputCount: this.outputs.length,
+      weights: this._weights,
+      biases: this._biases
+    };
+  }
+  toDataString() {
+    return JSON.stringify(this.toData());
+  }
+  static fromData(data) {
+    const { inputCount, outputCount, weights, biases } = data;
+    const layer = new _FeedForwardNetworkLayer(0, 0);
+    layer._inputs = new Array(inputCount).fill(0);
+    layer.outputs = new Array(outputCount).fill(0);
+    layer._weights = weights;
+    layer._biases = biases;
+    return layer;
+  }
   randomize() {
     for (let i = 0; i < this._weights.length; i++) {
       for (let j = 0; j < this._weights[0].length; j++) {
@@ -92,7 +112,9 @@ var FeedForwardNetworkLayer = class {
   }
   feedForward(inputs) {
     if (this._inputs.length !== inputs.length) {
-      throw new Error("Invalid input length");
+      throw new Error(
+        `Invalid input length (${this._inputs.length} ${inputs.length})`
+      );
     }
     for (let i = 0; i < this._inputs.length; i++) {
       this._inputs[i] = inputs[i];
@@ -109,6 +131,9 @@ var FeedForwardNetworkLayer = class {
   sigmoid(x) {
     return 1 / (1 + Math.exp(-x));
   }
+  get inputSize() {
+    return this._inputs.length;
+  }
   backwardPass(nextLayerError, learningRate) {
     const errors = new Array(this._inputs.length).fill(0);
     for (let i = 0; i < this.outputs.length; i++) {
@@ -124,22 +149,47 @@ var FeedForwardNetworkLayer = class {
 };
 
 // src/FeedForwardNeuralNetwork.ts
-var FeedForwardNeuralNetwork = class {
+var FeedForwardNeuralNetwork = class _FeedForwardNeuralNetwork {
   _layers;
-  constructor(layers) {
+  _softmax;
+  constructor(layers, softmax = false) {
     this._layers = [];
+    this._softmax = softmax;
     for (let i = 0; i < layers.length - 1; i++) {
-      this._layers.push(
-        new FeedForwardNetworkLayer(layers[i], layers[i + 1])
-      );
+      this._layers[i] = new FeedForwardNetworkLayer(layers[i], layers[i + 1]);
     }
+  }
+  static fromData({
+    config: { softmax },
+    layers
+  }) {
+    console.log("loading from data");
+    const net = new _FeedForwardNeuralNetwork([]);
+    net._layers = layers.map(FeedForwardNetworkLayer.fromData);
+    net._softmax = softmax;
+    return net;
+  }
+  toData() {
+    return JSON.stringify({
+      config: { softmax: this._softmax },
+      layers: this._layers.map((l) => l.toData())
+    });
   }
   feedForward(inputs) {
     let outputs = this._layers[0].feedForward(inputs);
     for (let i = 1; i < this._layers.length; i++) {
       outputs = this._layers[i].feedForward(outputs);
     }
-    return outputs;
+    return this._softmax ? this.softmax(outputs) : outputs;
+  }
+  softmax(outputs) {
+    const max = Math.max(...outputs);
+    const exps = outputs.map((x) => Math.exp(x - max));
+    const sumExps = exps.reduce((acc, val) => acc + val, 0);
+    return exps.map((exp) => exp / sumExps);
+  }
+  get inputSize() {
+    return this._layers[0].inputSize;
   }
   train(inputs, targets, learningRate) {
     this.feedForward(inputs);

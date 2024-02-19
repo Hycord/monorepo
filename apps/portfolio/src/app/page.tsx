@@ -1,4 +1,3 @@
-
 import { BoidCanvas } from "@/components/canvases/BoidCanvas";
 import { BoidHomeSection } from "@/components/canvases/BoidHomeSection";
 import { useTheme } from "@/contexts/ThemeController";

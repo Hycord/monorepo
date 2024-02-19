@@ -1,0 +1,9 @@
+
+
+> test@1.0.5 start /home/hycord/code/hycord/apps/test
+> bun ./src/index.ts
+
+[38;2;244;1;126m[1m[[22mFFNNTrainer - DATA[1m][22m[39m Input: [0, 0], Expected Output: 0, Predicted Output: 0, Correct: true
+[38;2;244;1;126m[1m[[22mFFNNTrainer - DATA[1m][22m[39m Input: [0, 1], Expected Output: 1, Predicted Output: 1, Correct: true
+[38;2;244;1;126m[1m[[22mFFNNTrainer - DATA[1m][22m[39m Input: [1, 0], Expected Output: 1, Predicted Output: 1, Correct: true
+[38;2;244;1;126m[1m[[22mFFNNTrainer - DATA[1m][22m[39m Input: [1, 1], Expected Output: 0, Predicted Output: 0, Correct: true
