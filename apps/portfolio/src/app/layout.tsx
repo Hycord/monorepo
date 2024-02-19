@@ -26,7 +26,7 @@ export default function RootLayout({
       <Script
         async
         defer
-        src="https://a.masen.dev/script.js"
+        src="/a/script.js"
         data-website-id={process.env.ANALYTICS_ID}
       ></Script>
       <ThemeControllerProvider

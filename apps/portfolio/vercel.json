@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/a/:match*",
+        "destination": "https://cdn.masen.dev/:match*"
+      }
+    ]
+  }
