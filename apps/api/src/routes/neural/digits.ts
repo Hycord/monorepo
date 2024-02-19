@@ -15,14 +15,7 @@ export default async (server: FastifyInstance) => {
 
       const prediction = net.feedForward(data);
 
-      const headers = new Headers();
-      headers.set("Content-Type", "application/json");
-      res.send(
-        new Response(JSON.stringify(prediction), {
-          status: 200,
-          headers,
-        })
-      );
+      res.send(prediction);
     } catch (e) {
       res.send(
         new Response((e as Error).message, {
@@ -32,14 +25,14 @@ export default async (server: FastifyInstance) => {
     }
   });
 
-  server.get("/neural/digits/model", async (req, res) => {
-    const headers = new Headers();
-    headers.set("Content-Type", "application/json");
-    res.send(
-      new Response(JSON.stringify(brainData), {
-        status: 200,
-        headers,
-      })
-    );
-  });
+  // server.get("/neural/digits/model", async (req, res) => {
+  //   const headers = new Headers();
+  //   headers.set("Content-Type", "application/json");
+  //   res.send(
+  //     new Response(JSON.stringify(brainData), {
+  //       status: 200,
+  //       headers,
+  //     })
+  //   );
+  // });
 };

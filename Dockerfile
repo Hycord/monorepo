@@ -1,4 +1,4 @@
-FROM node:20-alpine AS base
+FROM node:20-slim AS base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -45,5 +45,6 @@ COPY --from=installer /app .
 
 EXPOSE 3000
 ENV ADDRESS=0.0.0.0 PORT=3000
+ENV FASTIFY_ADDRESS = 0.0.0.0
 
-CMD turbo start:docker --filter api
+CMD node /app/apps/api/dist/index.js

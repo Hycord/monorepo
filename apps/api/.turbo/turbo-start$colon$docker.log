@@ -3,5 +3,11 @@
 > api@1.0.15 start:docker /home/hycord/code/monorepo/apps/api
 > node ./dist/index.js
 
+(node:11617) [FSTWRN002] FastifyWarning: The routes_default plugin being registered mixes async and callback styles, which will result in an error in `fastify@5`
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11617) [FSTWRN002] FastifyWarning: The neural_default plugin being registered mixes async and callback styles, which will result in an error in `fastify@5`
 loading from data
-{"level":30,"time":1708340899722,"pid":197042,"hostname":"MasensLaptop","msg":"Server listening at http://127.0.0.1:3000"}
+{"level":30,"time":1708351639286,"pid":11617,"hostname":"MasensLaptop","msg":"Server listening at http://127.0.0.1:3000"}
+{"level":30,"time":1708351642011,"pid":11617,"hostname":"MasensLaptop","reqId":"req-1","req":{"method":"POST","url":"/neural/digits/predict","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":60724},"msg":"incoming request"}
+{"level":30,"time":1708351642041,"pid":11617,"hostname":"MasensLaptop","reqId":"req-1","res":{"statusCode":200},"responseTime":29.16963199991733,"msg":"request completed"}
+{"level":40,"time":1708351642041,"pid":11617,"hostname":"MasensLaptop","reqId":"req-1","err":{"type":"Error","message":"write after end","stack":"Error [ERR_STREAM_WRITE_AFTER_END]: write after end\n    at write_ (node:_http_outgoing:885:11)\n    at ServerResponse.write (node:_http_outgoing:838:15)\n    at Readable.ondata (node:internal/streams/readable:1007:22)\n    at Readable.emit (node:events:518:28)\n    at addChunk (node:internal/streams/readable:559:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)\n    at Readable.push (node:internal/streams/readable:390:5)\n    at node:internal/webstreams/adapters:517:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","code":"ERR_STREAM_WRITE_AFTER_END"},"msg":"response terminated with an error with headers already sent"}

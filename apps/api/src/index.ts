@@ -7,7 +7,7 @@ const server = Fastify({
 
 server.register(routes);
 
-server.listen({ host: "0.0.0.0", port: 3000 }, function (err, address) {
+server.listen(3000, "0.0.0.0", function (err, address) {
   if (err) {
     server.log.error(err);
     process.exit(1);

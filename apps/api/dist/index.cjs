@@ -42,14 +42,7 @@ var digits_default = async (server2) => {
       if (typeof data != "object" || !data?.length || data.length != 784)
         throw new Error("Invalid content");
       const prediction = net.feedForward(data);
-      const headers = new Headers();
-      headers.set("Content-Type", "application/json");
-      res.send(
-        new Response(JSON.stringify(prediction), {
-          status: 200,
-          headers
-        })
-      );
+      res.send(prediction);
     } catch (e) {
       res.send(
         new Response(e.message, {
@@ -57,16 +50,6 @@ var digits_default = async (server2) => {
         })
       );
     }
-  });
-  server2.get("/neural/digits/model", async (req, res) => {
-    const headers = new Headers();
-    headers.set("Content-Type", "application/json");
-    res.send(
-      new Response(JSON.stringify(neural_digits_brain_default), {
-        status: 200,
-        headers
-      })
-    );
   });
 };
 
@@ -80,13 +63,9 @@ var neural_default = async (server2, options, done) => {
 var routes_default = async (server2, options, done) => {
   await server2.register(neural_default);
   server2.get("/", async (req, res) => {
-    res.send(
-      new Response(
-        JSON.stringify({
-          message: "Welcome to my API! I will have documentation available soon under https://masen.dev/api/docs"
-        })
-      )
-    );
+    res.send({
+      message: "Welcome to my API! I will have documentation available soon under https://masen.dev/api/docs"
+    });
   });
   done();
 };
@@ -96,7 +75,7 @@ var server = (0, import_fastify.default)({
   logger: true
 });
 server.register(routes_default);
-server.listen({ port: 3e3 }, function(err, address) {
+server.listen({ host: "0.0.0.0", port: 3e3 }, function(err, address) {
   if (err) {
     server.log.error(err);
     process.exit(1);

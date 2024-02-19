@@ -9,14 +9,10 @@ export default async (
   await server.register(neural);
 
   server.get("/", async (req, res) => {
-    res.send(
-      new Response(
-        JSON.stringify({
-          message:
-            "Welcome to my API! I will have documentation available soon under https://masen.dev/api/docs",
-        })
-      )
-    );
+    res.send({
+      message:
+        "Welcome to my API! I will have documentation available soon under https://masen.dev/api/docs",
+    });
   });
 
   done();
