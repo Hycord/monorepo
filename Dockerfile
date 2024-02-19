@@ -41,6 +41,9 @@ COPY --from=installer /app .
 # COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/standalone ./
 # COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
 # COPY --from=installer --chown=nextjs:nodejs /app/apps/web/public ./apps/web/public
+
+
 EXPOSE 3000
+ENV ADDRESS=0.0.0.0 PORT=3000
 
 CMD turbo start:docker --filter api
