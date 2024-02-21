@@ -15,5 +15,11 @@ export default async (
     });
   });
 
+  server.all("*", async (req, res) => {
+    res.code(404).send({
+      message: `Unknown Endpoint ${req.method} ${req.url}`,
+    });
+  });
+
   done();
 };

@@ -45,6 +45,7 @@ function Header() {
             buttonVariants({ variant: "link" }),
             "text-inherit text-lg"
           )}
+          target="_blank"
           href="/resume"
           tabIndex={4}
         >
@@ -88,6 +89,7 @@ function Header() {
               <Link
                 className="p-2 hover:underline w-full flex items-center justify-center"
                 href="/resume"
+                target="_blank"
               >
                 Resume
               </Link>

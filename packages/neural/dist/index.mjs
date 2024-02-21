@@ -151,9 +151,12 @@ var FeedForwardNeuralNetwork = class _FeedForwardNeuralNetwork {
   feedForward(inputs) {
     let outputs = this._layers[0].feedForward(inputs);
     for (let i = 1; i < this._layers.length; i++) {
-      outputs = this._layers[i].feedForward(outputs);
+      outputs = this._layers[i].feedForward(outputs.map(this.RELU));
     }
     return this._softmax ? this.softmax(outputs) : outputs;
+  }
+  RELU(x) {
+    return (Math.abs(x) + x) / 2;
   }
   softmax(outputs) {
     const max = Math.max(...outputs);

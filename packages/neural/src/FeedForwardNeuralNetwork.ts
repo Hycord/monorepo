@@ -42,9 +42,13 @@ export class FeedForwardNeuralNetwork {
   public feedForward(inputs: number[]): number[] {
     let outputs = this._layers[0]!.feedForward(inputs);
     for (let i = 1; i < this._layers.length; i++) {
-      outputs = this._layers[i]!.feedForward(outputs);
+      outputs = this._layers[i]!.feedForward(outputs.map(this.RELU));
     }
     return this._softmax ? this.softmax(outputs) : outputs;
+  }
+
+  private RELU(x: number) {
+    return (Math.abs(x) + x) / 2;
   }
 
   private softmax(outputs: number[]): number[] {

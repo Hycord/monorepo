@@ -38,7 +38,7 @@ import { useWindowSize } from "@/hooks/useWindowSize";
 import useDebounce from "@/hooks/useDebounce";
 
 export interface BoidCanvasProps
-  extends React.ButtonHTMLAttributes<HTMLCanvasElement> {
+  extends React.HTMLAttributes<HTMLCanvasElement> {
   // width?: number;
   // height?: number;
   count?: number;

@@ -15,6 +15,7 @@ declare class FeedForwardNeuralNetwork {
     }): FeedForwardNeuralNetwork;
     toData(): string;
     feedForward(inputs: number[]): number[];
+    private RELU;
     private softmax;
     get inputSize(): number;
     train(inputs: number[], targets: number[], learningRate: number): void;

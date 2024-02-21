@@ -1,6 +1,7 @@
 import { FastifyInstance } from "fastify";
 import { FeedForwardNeuralNetwork } from "@hycord/neural";
 import brainData from "./neural.digits.brain.json";
+import { useAuthenticated } from "../../lib/utils.js";
 
 export default async (server: FastifyInstance) => {
   const net = FeedForwardNeuralNetwork.fromData(brainData);
@@ -15,24 +16,23 @@ export default async (server: FastifyInstance) => {
 
       const prediction = net.feedForward(data);
 
-      res.send(prediction);
+      res.type("application/json").send(prediction);
     } catch (e) {
-      res.send(
-        new Response((e as Error).message, {
-          status: 404,
-        })
-      );
+      res.code(404).send((e as Error).message);
     }
   });
 
-  // server.get("/neural/digits/model", async (req, res) => {
-  //   const headers = new Headers();
-  //   headers.set("Content-Type", "application/json");
-  //   res.send(
-  //     new Response(JSON.stringify(brainData), {
-  //       status: 200,
-  //       headers,
-  //     })
-  //   );
-  // });
+  server.get("/neural/digits/model", async (req, res) => {
+    try {
+      await useAuthenticated(req);
+
+      return res.type("application/json").send(brainData);
+    } catch (e) {
+      res
+        .status(401)
+        .send(
+          "Unauthorized. Submit a contact form to gain access to downloading models (This was done to prevent spam and save costs)"
+        );
+    }
+  });
 };
