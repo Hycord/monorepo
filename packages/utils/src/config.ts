@@ -14,11 +14,13 @@ function constructConfigHeaders() {
 }
 
 export async function get<T extends Object>(key: string): Promise<T | null> {
-  const data = await Axios.get(constructConfigURL(["item", key]), {
+ try{ const data = await Axios.get(constructConfigURL(["item", key]), {
     headers: constructConfigHeaders(),
   });
 
   if (data.status != 200) {
     return null;
-  } else return data.data as T;
+  } else return data.data as T;}catch(e){
+    return null;
+  }
 }

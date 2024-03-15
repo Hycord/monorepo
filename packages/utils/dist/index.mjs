@@ -9,13 +9,17 @@ function constructConfigHeaders() {
   };
 }
 async function get(key) {
-  const data = await Axios.get(constructConfigURL(["item", key]), {
-    headers: constructConfigHeaders()
-  });
-  if (data.status != 200) {
+  try {
+    const data = await Axios.get(constructConfigURL(["item", key]), {
+      headers: constructConfigHeaders()
+    });
+    if (data.status != 200) {
+      return null;
+    } else
+      return data.data;
+  } catch (e) {
     return null;
-  } else
-    return data.data;
+  }
 }
 export {
   get

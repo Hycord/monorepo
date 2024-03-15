@@ -45,13 +45,17 @@ function constructConfigHeaders() {
   };
 }
 async function get(key) {
-  const data = await import_axios.default.get(constructConfigURL(["item", key]), {
-    headers: constructConfigHeaders()
-  });
-  if (data.status != 200) {
+  try {
+    const data = await import_axios.default.get(constructConfigURL(["item", key]), {
+      headers: constructConfigHeaders()
+    });
+    if (data.status != 200) {
+      return null;
+    } else
+      return data.data;
+  } catch (e) {
     return null;
-  } else
-    return data.data;
+  }
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

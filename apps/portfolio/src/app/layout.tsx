@@ -10,15 +10,25 @@ import { cookies } from "next/headers";
 import Script from "next/script";
 import { Toaster } from "@/components/ui/sonner";
 import QueryProvider from "@/contexts/QueryProvider";
+import { get } from "@hycord/util";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Hycord's Portfolio",
-  description: "18 Year old developer from the United States",
-};
 
-export default function RootLayout({
+export async function generateMetadata(): Promise<Metadata> {
+  const metadata = await get("metadata");
+  console.log(metadata)
+
+  return metadata ?? {
+    title: "Masen's Portfolio"
+  }
+}
+// export const metadata: Metadata = {
+//   title: "Masen's Portfolio",
+//   description: "Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.",
+// };
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -52,4 +62,4 @@ export default function RootLayout({
   );
 }
 
-const ThemeWrapper = ({ children }: { children: React.ReactNode }) => {};
+const ThemeWrapper = ({ children }: { children: React.ReactNode }) => { };
