@@ -1,6 +1,6 @@
 import { FastifyRequest } from "fastify";
 import { EdgeConfig } from "./types.js";
-import { get } from "./config.js";
+import { get } from "@hycord/util"
 
 export function useCookies(request: FastifyRequest) {
   const cookies = new Map<string, string>();

@@ -1,4 +1,5 @@
-import util from 'util';
+import * as util from 'util';
+import util__default from 'util';
 
 declare function mean(numbers: number[]): number;
 declare function median(numbers: number[]): number;
@@ -13,6 +14,8 @@ declare function geometricMean(numbers: number[]): number;
 declare function harmonicMean(numbers: number[]): number;
 declare function degreeToRadian(deg: number): number;
 declare function approximates(a: number, b: number): boolean;
+declare function generateRandomNormal(size: number): number[];
+declare function groupArrayByLength<T>(arr: T[], groupSize: number): T[][];
 declare function random(minOrMax: number, max?: number): number;
 declare function randomInt(minOrMax: number, max?: number): number;
 declare function lerp(min: number, max: number, i: number): number;
@@ -85,7 +88,7 @@ declare class Segment {
 declare class Vector2D {
     private value;
     constructor(x?: number, y?: number);
-    [util.inspect.custom](): string;
+    [util__default.inspect.custom](): string;
     toString(): string;
     get x(): number;
     get y(): number;
@@ -123,4 +126,37 @@ declare class Vector2D {
     zero(): this;
 }
 
-export { DEGREE, EPSILON, MAX_SAFE_INTEGER, Point, Polygon, Segment, Vector2D, approximates, degreeToRadian, geometricMean, harmonicMean, lerp, max, mean, median, min, mode, probabilityToBoolean, random, randomInt, range, standardDeviation, sum, variance };
+declare class Matrix {
+    private readonly _rows;
+    private readonly _cols;
+    private readonly _data;
+    get rows(): number;
+    get cols(): number;
+    constructor(rows: number, cols: number, initial?: number[] | number[][] | Matrix);
+    get data(): number[];
+    private getIndex;
+    get(row: number, col: number): number;
+    set(row: number, col: number, value: number): void;
+    get size(): number;
+    fill(val: number | ((i: number) => number)): this;
+    [util.inspect.custom](): string;
+    toString(): string;
+    [Symbol.iterator](): Generator<Matrix, void, unknown>;
+    toNestedArray(): number[][];
+    transpose(): Matrix;
+    map(callback: (currentValue: number, index: number) => number): Matrix;
+    reduce(callback: (accumulator: number, currentValue: number) => number, initialValue: number): number;
+    add(matrix: Matrix): Matrix;
+    get C(): Matrix;
+    scalarMultiply(scalar: number): Matrix;
+    dotProduct(matrix: Matrix): Matrix;
+    reshape(rows: number, cols: number): Matrix;
+    subtract(matrix: Matrix): Matrix;
+    static randomNormal(rows: number, cols: number): Matrix;
+    indexToRowCol(index: number): {
+        row: number;
+        col: number;
+    };
+}
+
+export { DEGREE, EPSILON, MAX_SAFE_INTEGER, Matrix, Point, Polygon, Segment, Vector2D, approximates, degreeToRadian, generateRandomNormal, geometricMean, groupArrayByLength, harmonicMean, lerp, max, mean, median, min, mode, probabilityToBoolean, random, randomInt, range, standardDeviation, sum, variance };

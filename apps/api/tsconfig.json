@@ -2,7 +2,7 @@
   "extends": "@hycord/typescript-config/base.json",
   "include": [
     "src"
-  ],
+, "../../packages/utils/src/config.ts"  ],
   "compilerOptions": {
    "esModuleInterop": true,
    "allowArbitraryExtensions": true 

@@ -1,4 +1,4 @@
-import { DEGREE, EPSILON } from './constants';
+import { DEGREE, EPSILON } from "./constants";
 
 // Function to calculate the mean (average) of a list of numbers
 export function mean(numbers: number[]): number {
@@ -84,6 +84,30 @@ export function degreeToRadian(deg: number) {
 
 export function approximates(a: number, b: number) {
   return Math.abs(a - b) <= EPSILON * Math.max(1.0, Math.abs(a), Math.abs(b));
+}
+
+export function generateRandomNormal(size: number) {
+  const randomNumbers = [];
+  for (let i = 0; i < size; i++) {
+    let u = 0,
+      v = 0;
+    while (u === 0) u = Math.random(); // Converting [0,1) to (0,1)
+    while (v === 0) v = Math.random();
+    const rand = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    randomNumbers.push(rand);
+  }
+  return randomNumbers;
+}
+
+export function groupArrayByLength<T>(arr: T[], groupSize: number): T[][] {
+  const groupedArray: T[][] = [];
+  const numGroups = Math.ceil(arr.length / groupSize);
+
+  for (let i = 0; i < numGroups; i++) {
+    groupedArray.push(arr.slice(i * groupSize, (i + 1) * groupSize));
+  }
+
+  return groupedArray;
 }
 
 export function random(minOrMax: number, max?: number): number {

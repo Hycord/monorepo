@@ -14,7 +14,8 @@
     "@fastify/compress": "^7.0.0",
     "@hycord/math": "workspace:*",
     "@hycord/neural": "workspace:*",
-    "axios": "^1.6.7",
+    "@hycord/util": "workspace:*",
+
     "fastify": "^4.26.1"
   },
   "devDependencies": {

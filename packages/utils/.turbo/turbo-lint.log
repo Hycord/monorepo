@@ -1,0 +1,5 @@
+
+
+> @hycord/math@0.0.0 lint /home/hycord/code/hycord/packages/math
+> eslint . --max-warnings 0
+
