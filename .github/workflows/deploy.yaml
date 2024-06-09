@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - apps/api/**
+      - Dockerfile
 
 env:
   REGISTRY: ghcr.io
