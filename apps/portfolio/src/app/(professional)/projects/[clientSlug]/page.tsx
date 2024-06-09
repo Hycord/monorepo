@@ -33,9 +33,7 @@ export async function generateMetadata({
   return {
     title: `${client?.client.displayName ?? "Masen"}'s Projects`,
     description: `${client?.client.projects.length} projects completed.`,
-    ...(client?.images.icon
-      ? { icons: [{ rel: "og:image", url: client?.images.icon! }] }
-      : {}),
+    ...(client?.images.icon ? { icons: [{ url: client?.images.icon! }] } : {}),
   } satisfies Metadata;
 }
 
