@@ -46,14 +46,10 @@ function Page({ params: { clientSlug } }: { params: { clientSlug: string } }) {
           <p>{client.displayName ? client.displayName : client.slug}</p>
         </CardTitle>
         {client.quote ? (
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Personal Review</AccordionTrigger>
-              <AccordionContent className="max-w-prose text-lg">
-                {client.quote}
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <div className="mt-4 flex flex-col gap-2">
+            <div className="text-xl font-bold">Statement:</div>
+            <div className="max-w-prose text-lg">{client.quote}</div>
+          </div>
         ) : (
           <></>
         )}
