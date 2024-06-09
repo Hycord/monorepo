@@ -7,3 +7,88 @@
    - Environments: .env.local
 
  [37m[1m [22m[39m Creating an optimized production build ...
+ [32m[1m✓[22m[39m Compiled successfully
+[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m [31m[1m⨯[22m[39m ESLint: ESLint configuration in .eslintrc.js » @hycord/eslint-config/next.js is invalid: 	- Unexpected top-level property "tsconfigRootDir".  Referenced from: /home/hycord/code/monorepo/apps/portfolio/.eslintrc.js
+[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Linting and checking validity of types     [32m[1m✓[22m[39m Linting and checking validity of types 
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/12)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/12)  [36m[=   ][39m{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (12/12) 
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+{
+  description: 'Transform your next idea into a reality. I specialize in Full Stack Software Engineering as well as Systems Administration.',
+  title: { default: "Masen's Portfolio", template: "%s | Masen's Portfolio" }
+}
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
+
+[4mRoute (app)[24m                               [4mSize[24m     [4mFirst Load JS[24m
+┌ λ /                                     8.96 kB         [37m[1m126 kB[22m[39m
+├ λ /_not-found                           883 B          [37m[1m85.1 kB[22m[39m
+├ λ /contact                              25.2 kB         [37m[1m125 kB[22m[39m
+├ λ /contact/submit                       0 B                [37m[1m0 B[22m[39m
+├ λ /hiawatha                             174 B          [37m[1m91.2 kB[22m[39m
+├ λ /neural/classify/digits               4.53 kB         [37m[1m121 kB[22m[39m
+├ λ /projects                             9.87 kB         [37m[1m127 kB[22m[39m
+├ λ /projects/[clientSlug]                3.92 kB         [37m[1m121 kB[22m[39m
+├ λ /projects/[clientSlug]/[projectSlug]  1.62 kB         [37m[1m104 kB[22m[39m
+├ λ /resume                               140 B          [37m[1m84.4 kB[22m[39m
+└ λ /set-theme                            0 B                [37m[1m0 B[22m[39m
++ First Load JS shared by all             [37m[1m84.2 kB[22m[39m
+  ├ chunks/14720756-6d07314f5f6a9f01.js   53.4 kB
+  ├ chunks/726-7d89dcdc2bfeba20.js        28.9 kB
+  └ other shared chunks (total)           1.97 kB
+
+
+λ  (Dynamic)  server-rendered on demand using Node.js
+
+[?25h

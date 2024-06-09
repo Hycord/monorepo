@@ -18,8 +18,6 @@ export default function ThemeToggle(props: IThemeToggleProps) {
   React.useEffect(() => {
     if (keys.has("t") && keys.has("shift")) {
       toggleTheme();
-      // @ts-ignore
-      umami.track("Toggle Theme", { theme, type: "shortcut" });
     }
   }, [keys]);
 

@@ -114,6 +114,7 @@ export function BoidCanvas({
 
   const update = useMemo(
     () => (deltaTime: number, view: Viewport) => {
+      if (width && width < 768) return setBoids([]);
       for (const boid of boids) {
         boid.update(boids, deltaTime, {
           cohesionStrength: cohesion,
@@ -124,7 +125,7 @@ export function BoidCanvas({
         });
       }
     },
-    [cohesion, separation, alignment, boids]
+    [cohesion, separation, alignment, boids, width]
   );
 
   const canvasRef = useViewport(
@@ -143,6 +144,10 @@ export function BoidCanvas({
   );
 
   const startup = useDebounce(() => {
+    if (width && width < 768) {
+      setBoids([]);
+      return;
+    }
     const boids = [];
 
     if (canvasRef.current) {
@@ -159,8 +164,10 @@ export function BoidCanvas({
       canvasRef.current.height = canvasRef.current.offsetHeight;
     }
 
+    console.log(boids.length);
+
     setBoids(boids);
-  }, 50);
+  }, 10);
 
   useEffect(() => startup, [count, canvasRef.current, width, height]);
 

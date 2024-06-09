@@ -9,11 +9,11 @@
 [34mCLI[39m Target: es2022
 [34mCJS[39m Build start
 [34mESM[39m Build start
-[32mESM[39m [1mdist/index.mjs [22m[32m521.00 B[39m
-[32mESM[39m ⚡️ Build success in 46ms
-[32mCJS[39m [1mdist/index.js [22m[32m1.49 KB[39m
-[32mCJS[39m ⚡️ Build success in 47ms
+[32mESM[39m [1mdist/index.mjs [22m[32m558.00 B[39m
+[32mESM[39m ⚡️ Build success in 35ms
+[32mCJS[39m [1mdist/index.js [22m[32m2.14 KB[39m
+[32mCJS[39m ⚡️ Build success in 36ms
 [34mDTS[39m Build start
-[32mDTS[39m ⚡️ Build success in 1605ms
+[32mDTS[39m ⚡️ Build success in 1733ms
 [32mDTS[39m [1mdist/index.d.ts  [22m[32m89.00 B[39m
 [32mDTS[39m [1mdist/index.d.mts [22m[32m89.00 B[39m

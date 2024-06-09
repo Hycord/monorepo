@@ -119,3 +119,11 @@
 .glass-3 {
   @apply bg-opacity-30 backdrop-blur-lg drop-shadow-lg;
 }
+.truncate-2-lines {
+  max-height: 3.6em; /* double the size of line-height */
+  line-height: 1.8em;
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+}

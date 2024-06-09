@@ -9,10 +9,12 @@
     "dev": "bun --watch ./src/index.ts"
   },
   "dependencies": {
+    "@hycord/image": "workspace:*",
     "@hycord/logger": "workspace:*",
     "@hycord/math": "workspace:*",
     "@hycord/neural": "workspace:*",
-    "@hycord/image": "workspace:*"
+    "@types/node-rsa": "^1.1.4",
+    "node-rsa": "^1.1.1"
   },
   "devDependencies": {
     "@hycord/eslint-config": "workspace:*",
