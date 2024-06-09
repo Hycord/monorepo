@@ -18,9 +18,26 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { slugToClient } from "@hycord/content";
 import { ExternalLink, Minus } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+
+export async function generateMetadata({
+  params: { clientSlug },
+}: {
+  params: { clientSlug: string };
+}) {
+  const client = slugToClient(clientSlug as any);
+
+  return {
+    title: `${client?.client.displayName ?? "Masen"}'s Projects`,
+    description: `${client?.client.projects.length} projects completed.`,
+    ...(client?.images.icon
+      ? { icons: [{ rel: "og:image", url: client?.images.icon! }] }
+      : {}),
+  } satisfies Metadata;
+}
 
 function Page({ params: { clientSlug } }: { params: { clientSlug: string } }) {
   const cl = slugToClient(clientSlug as any);
