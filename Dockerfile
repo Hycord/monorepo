@@ -7,7 +7,7 @@ FROM base AS builder
 RUN corepack enable
 # Set working directory
 WORKDIR /app
-RUN pnpm i -g turbo
+RUN pnpm i -g turbo@1.12.5
 COPY . .
 RUN turbo prune api --docker
  
