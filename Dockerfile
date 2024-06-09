@@ -28,10 +28,6 @@ RUN pnpm build --filter api
 FROM installer AS runner
 WORKDIR /app
  
-# Don't run production as root
-# RUN addgroup --system --gid 1001 nodejs
-# USER nodejs
- 
 # COPY --from=installer /app/apps/api/package.json .
 # COPY --from=installer /app/apps/web/package.json .
 COPY --from=installer /app .
