@@ -5,6 +5,7 @@ export const ProjectPortfolio: ProjectSchema = {
   slug: "portfolio",
   clientSlug: "hycord",
   public: true,
+  images: ["boids.png", "contact.png"],
   date: new Date("2023-06-23"),
 
   tags: ["React", "Next.js", "Vercel", "Docker"],

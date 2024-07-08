@@ -314,6 +314,7 @@ var ProjectPortfolio = {
   slug: "portfolio",
   clientSlug: "hycord",
   public: true,
+  images: ["boids.png", "contact.png"],
   date: /* @__PURE__ */ new Date("2023-06-23"),
   tags: ["React", "Next.js", "Vercel", "Docker"],
   description: "My personal portfolio website.",
@@ -349,6 +350,437 @@ var ProjectPortfolio = {
   ]
 };
 
+// src/(hycord)/premier-studios-backend.ts
+var ProjectBackendApplication = {
+  title: "Premier Studios Backend Application",
+  slug: "premier-studios-backend",
+  clientSlug: "hycord",
+  description: "A RESTful API for a simple task management system",
+  endURL: "https://github.com/hycord/premierstudios-application-backend",
+  date: /* @__PURE__ */ new Date("2024-06-28"),
+  public: true,
+  images: ["swagger.png"],
+  content: [
+    {
+      type: "subtitle",
+      content: "a RESTful API for a simple task management system"
+    },
+    {
+      type: "title",
+      content: "Tech Stack"
+    },
+    {
+      type: "list",
+      content: [
+        "Language - Typescript",
+        "Database - MariaDB",
+        "Database ORM - Prisma",
+        "Development/Deployment - Docker",
+        "Version Control - Git via https://github.com/hycord/premierstudios-application-backend"
+      ]
+    },
+    {
+      type: "title",
+      content: "Core Functionality"
+    },
+    {
+      type: "list",
+      content: [
+        "User Authentication",
+        "Registration",
+        "Login",
+        "Logout",
+        "Task Management",
+        "Create",
+        "Read",
+        "Update",
+        "Delete",
+        "Must support linking User -> Task in a one-to-many relationship"
+      ]
+    },
+    {
+      type: "title",
+      content: "Required Endpoints"
+    },
+    {
+      type: "table",
+      headers: ["METHOD", "PATH"],
+      content: [
+        { key: "POST", value: "/auth/register" },
+        { key: "POST", value: "/auth/login" },
+        { key: "POST", value: "/auth/logout" },
+        { key: "POST", value: "/tasks" },
+        { key: "PUT", value: "/tasks/:id" },
+        { key: "DELETE", value: "/tasks/:id" },
+        { key: "GET", value: "/tasks" },
+        { key: "GET", value: "/tasks/:id" },
+        { key: "GET", value: "/users" },
+        { key: "GET", value: "/users/:id/tasks" }
+      ]
+    },
+    {
+      type: "title",
+      content: "Required Data Models"
+    },
+    {
+      type: "subtitle",
+      content: "User"
+    },
+    {
+      type: "list",
+      content: [
+        "id",
+        "username",
+        "email",
+        "password (Hashed) `This is handled automatically via /src/utils/database.ts`"
+      ]
+    },
+    {
+      type: "subtitle",
+      content: "Task"
+    },
+    {
+      type: "list",
+      content: [
+        "id",
+        "title",
+        "description",
+        "status",
+        "created_at",
+        "updated_at",
+        "user_id (assigned to)"
+      ]
+    },
+    {
+      type: "title",
+      content: "Setup Instructions"
+    },
+    {
+      type: "subtitle",
+      content: "Local Development"
+    },
+    {
+      type: "list",
+      content: [
+        "Have the LTS Node.js version available",
+        "Have docker available (if using)",
+        "Create a MariaDB server that you have access to. Doesn't matter where or how just make sure you can push to a specified db",
+        "Copy .env.example -> .env and fill in the values as needed (Please replace the JWT secret!)",
+        "run `npm install`",
+        "run `npm run init`",
+        "run `npm run dev` and you will see messages in the console instructing you as to the port you have selected. (Go https://localhost:3000/api-docs to view API docs once the project is running locally)"
+      ]
+    },
+    {
+      type: "subtitle",
+      content: "Docker Deployment"
+    },
+    {
+      type: "list",
+      content: [
+        `To deploy the project locally with docker you will still need to follow steps 1-2 of "Local Development" however you should just be able to type "docker build . -t backend" to build the project and "docker run backend" to run it once you've configured your database settings appropriately.`,
+        'You can also use "docker compose up" to start both redis and mariadb locally then "npm run build && npm run start" or "npm run dev" after configuring environment variables'
+      ]
+    },
+    {
+      type: "title",
+      content: "API Documentation"
+    },
+    {
+      type: "subtitle",
+      content: "Full API documentation is available via swagger. Wherever you can reach the API you can view the docs under <host>/api-docs where the swagger interface will show up"
+    },
+    {
+      type: "title",
+      content: "Design Decisions"
+    },
+    {
+      type: "list",
+      content: [
+        "Although there were many options for each of the tools I chose to use when completing this project I have a reason for using each of them, although that's not to say they don't come with their own set of challenges.",
+        "One of the early challenges I ran into was actually with getting Swagger to run properly, as I had never used swagger before. I had to scaffold out the project as well as learn Swagger notation at the same time.",
+        "One of my most elegant solutions to a problem actually has to do with the hashing of passwords when placing them into the database. Instead of having a shared method which I call prior to passing my data into the database, I actually extended the base Prisma client to inject the hashing code before the data is sent to the database allowing me to pass raw passwords to the database write calls and receive hashed passwords in the database from wherever I chose to write to the database from.",
+        `> Small note: I place "return res.status(500).send();" at the end of most handler functions for 2 reasons:
+
+1. Guaranteed catch all. If I forget something it won't just hang
+2. Intellisense grays it out when there is no valid path to reach it so once it is grayed out I know I've covered all of the (type-based) edge cases.`
+      ]
+    },
+    {
+      type: "title",
+      content: "Bonus Features"
+    },
+    {
+      type: "subtitle",
+      content: "Filtering"
+    },
+    {
+      type: "list",
+      content: [
+        "Any text field (I.E. Username, Title, Description) can be used to filter and sort results.",
+        "",
+        "The following rules are applied:",
+        "",
+        '"The quick brown fox jumps over the lazy dog"',
+        "",
+        "Here's how the following queries would match that text:",
+        "",
+        "| Query | Match? | Description |",
+        "|-------|--------|-------------|",
+        "| `+fox +dog`       | Yes    | The text contains 'fox' and 'dog'                             |",
+        "| `+dog +fox`       | Yes    | The text contains 'dog' and 'fox'                             |",
+        "| `+dog -cat`       | Yes    | The text contains 'dog' but not 'cat'                         |",
+        "| `-cat`            | No     | The minus operator cannot be used on its own  |",
+        "| `fox dog`         | Yes    | The text contains 'fox' or 'dog'                              |",
+        "| `quic*`           | Yes    | The text contains a word starting with 'quic'                 |",
+        "| `quick fox @2`    | Yes    | 'fox' starts within a 2 word distance of 'quick'              |",
+        "| `fox dog @2`      | No     | 'dog' does not start within a 2 word distance of 'fox'        |",
+        `| "jumps over"    | Yes    | The text contains the whole phrase 'jumps over'               |`,
+        "",
+        "> Note: The `-` operator acts only to exclude rows that are otherwise matched by other search terms. Thus, a boolean-mode search that contains only terms preceded by `-` returns an empty result. It does not return \u201Call rows except those containing any of the excluded terms.\u201D",
+        "",
+        "We also support >, < and ~ operators for altering the ranking order of search results. As an example, consider the following two records:",
+        "",
+        '1. "The quick brown fox jumps over the lazy dog"',
+        '2. "The quick brown fox jumps over the lazy cat"',
+        "",
+        "| Query | Result | Description |",
+        "|-------|--------|-------------|",
+        "| `fox ~cat`            | Return 1 first, then 2   | Return all records containing 'fox', but rank records containing 'cat' lower                            |",
+        "| `fox (<cat >dog)`     | Return 1 first, then 2   | Return all records containing 'fox', but rank records containing 'cat' lower than rows containing 'dog' |"
+      ]
+    },
+    {
+      type: "subtitle",
+      content: "Rate Limiting"
+    },
+    {
+      type: "list",
+      content: [
+        "All routes have a rate limit of 30 requests/60 seconds; Redis handles all rate limits.",
+        'The keys for rate limits are as follows:\n\n`rate-limit::{channel}::{client IP}`\n\nThe global rate limit falls under the "global" channel and is the first middleware that is applied.',
+        'The helper "CreateRateLimit" can be used to apply other rate-limit channels as middleware.\n\nYou just call `app.use(CreateRateLimit(channel: string, rate: number, ttl: number))` to implement a rate limit.',
+        "> Note: To show the extensibility of this system, the `POST /auth/login` route has a rate limit of 1 request per 600 seconds (10 minutes).\n> There is no functional reason for this, just to show the ease at which this can be implemented"
+      ]
+    }
+  ],
+  publicGithub: true,
+  tags: ["Backend", "MariaDB", "Docker", "Prisma"],
+  languages: ["Typescript"]
+};
+
+// src/(hycord)/premier-studios-frontend.ts
+var ProjectFrontendApplication = {
+  title: "Premier Studios: Frontend Freelancer Application",
+  slug: "premier-studios-frontend",
+  clientSlug: "hycord",
+  description: "Frontend shop application for Premier Studios",
+  endURL: "https://premierstudios-application-frontend.vercel.app/",
+  images: ["cart.png", "modal.png"],
+  date: /* @__PURE__ */ new Date("2024-07-08"),
+  public: true,
+  content: [
+    {
+      type: "subtitle",
+      content: "a single-page e-commerce product page that displays a list of products, allows users to view details of each product, and add products to a shopping cart."
+    },
+    {
+      type: "title",
+      content: "Tech Stack"
+    },
+    {
+      type: "list",
+      content: [
+        "Language - Typescript",
+        "Version Control - Git via https://github.com/hycord/premierstudios-application-frontend"
+      ]
+    },
+    {
+      type: "title",
+      content: "Core Functionality"
+    },
+    {
+      type: "list",
+      content: [
+        "Product Listing:",
+        "Display a list of all products with their image, name, price, and a brief description.",
+        "Each product should have a 'View Details' button.",
+        "Product Details Modal:",
+        "Clicking 'View Details' should open a modal with detailed information about the product (image, full description, price).",
+        "The modal should have an 'Add to Cart' button.",
+        "Shopping Cart:",
+        "Display a simple shopping cart on the right side of the page.",
+        "The cart should show a list of added products with their name, price, and quantity.",
+        "Display the total price of the items in the cart.",
+        "Allow users to modify quantity and remove items from the cart."
+      ]
+    },
+    {
+      type: "title",
+      content: "Setup Instructions"
+    },
+    {
+      type: "subtitle",
+      content: "Local Development"
+    },
+    {
+      type: "list",
+      content: [
+        "Have the latest LTS Node.js version available",
+        "run `npm install`",
+        "run `npm run dev`"
+      ]
+    }
+  ],
+  publicGithub: true,
+  github: "https://github.com/hycord/premierstudios-application-frontend",
+  tags: ["Web", "React", "Next.js", "Local"],
+  languages: ["Typescript"]
+};
+
+// src/(hycord)/premier-studios-suggestions-bot.ts
+var ProjectSuggestionsBot = {
+  title: "Premier Studios: Discord Freelancer Application",
+  slug: "premier-studios-suggestions-bot",
+  clientSlug: "hycord",
+  description: "A bot to create and manage suggestions",
+  date: /* @__PURE__ */ new Date("2024-06-16"),
+  images: ["denied.png", "implemented.png"],
+  public: true,
+  content: [
+    {
+      type: "subtitle",
+      content: "A bot to create and manage suggestions."
+    },
+    {
+      type: "title",
+      content: "Information"
+    },
+    {
+      type: "list",
+      content: [
+        "Bot Name: Suggestions",
+        "Description: A bot to create and manage suggestions"
+      ]
+    },
+    {
+      type: "title",
+      content: "Requirements"
+    },
+    {
+      type: "subtitle",
+      content: "General Requirements"
+    },
+    {
+      type: "list",
+      content: [
+        "Must use slash commands, buttons, and modals"
+      ]
+    },
+    {
+      type: "subtitle",
+      content: "Commands"
+    },
+    {
+      type: "table",
+      headers: ["Name", "Syntax ([] = Optional, <> = Required)", "Description"],
+      content: [
+        {
+          key: "suggest",
+          value: "/suggest | Opens a modal where the user can input the suggestion to submit. Every suggestion has an id that starts from 0 and can be used to approve or deny it. It must be stored in a database and it should be different from the message id"
+        },
+        {
+          key: "suggestion accept",
+          value: "/suggestion accept <id> | Changes the embed color of the suggestion to green (#CAFFBF) and changes the footer to `Approved by <Username>`."
+        },
+        {
+          key: "suggestion deny",
+          value: "/suggestion deny <id> | Changes the embed color of the suggestion to red (#FFADAD) and changes the footer to `Denied by <Username>`."
+        },
+        {
+          key: "suggestion implement",
+          value: "/suggestion implement <id> | Changes the embed color of the suggestion to yellow (#FDFFB6) and changes the footer to `Implemented`. The suggestion must be accepted before it can be marked as implemented."
+        }
+      ]
+    },
+    {
+      type: "title",
+      content: "Development Overview"
+    },
+    {
+      type: "subtitle",
+      content: "Project Structure"
+    },
+    {
+      type: "list",
+      content: [
+        ".github/\n\u2514\u2500\u2500 workflows/ `Defines files related to building the project automatically on github`",
+        "prisma/\n\u2514\u2500\u2500 schema.prisma `Defines Database Schema`",
+        "src/ `Contains all source files`\n\u251C\u2500\u2500 index.ts `Starts the bot, and assigns all event listeners`\n\u251C\u2500\u2500 commands/ `Holds all command files`\n\u251C\u2500\u2500 lib/ `Holds all class definitions`\n\u2502 \u2514\u2500\u2500 Discord/ `Wrapper classes over discord.js`\n\u2514\u2500\u2500 util/ `Holds all utility methods`\n\u2502 \u2514\u2500\u2500 interactionHandlers/ `Holds all handler functions for interactions`",
+        ".env `Holds environment variable definitions for local development`",
+        "Dockerfile `Contains instructions on building the project via Docker`"
+      ]
+    },
+    {
+      type: "subtitle",
+      content: "Environment"
+    },
+    {
+      type: "subtitle",
+      content: "Database Setup (local)"
+    },
+    {
+      type: "list",
+      content: [
+        "If you are trying to develop this project locally it does not make sense to use a production database to test with.",
+        "In order to properly host a database, the recommended method is using Docker.",
+        "This can be done via the following command: `docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret mysql:5`"
+      ]
+    },
+    {
+      type: "separator"
+    },
+    {
+      type: "list",
+      content: [
+        "Create a .env file in the root of the project with the following values set appropriately.",
+        "When you use Docker, you can just populate docker environment variables using `-e <KEY>=<VALUE>` in the run command.",
+        '`DATABASE_URL`: Either set to `mysql://root:secret@127.0.0.1/suggestionsbot` if you followed the "Database Setup (local)" step or your database string if hosted externally. **Must be MySQL**',
+        "`DISCORD_TOKEN`: Set to the value you get from the discord developer page. Bot must be in the same guild as listed below",
+        "`DISCORD_GUILD_ID`: This is the guild that will be used for registering commands.",
+        "`DISCORD_CHANNEL_ID`: Channel where suggestion Embeds should be sent."
+      ]
+    },
+    {
+      type: "title",
+      content: "Building"
+    },
+    {
+      type: "list",
+      content: [
+        "There are 2 methods of building the project:",
+        "1. with npm using `npm run build`",
+        '2. with docker using `docker build . --network="host" -t ss`'
+      ]
+    },
+    {
+      type: "title",
+      content: "Starting"
+    },
+    {
+      type: "list",
+      content: [
+        "1. You must run `npm run db` every time you update the db schema",
+        "2. run `npm start` to start"
+      ]
+    }
+  ],
+  publicGithub: true,
+  github: "https://github.com/Hycord/premierstudios-application-discord-bot/",
+  tags: ["Discord", "Docker", "MySQL"],
+  languages: ["Typescript"]
+};
+
 // src/(hycord)/index.ts
 var hycord_default = {
   slug: "hycord",
@@ -358,7 +790,7 @@ var hycord_default = {
   discord: "https://discord.gg/9f7WbbvPP7",
   github: "https://github.com/hycord",
   website: "https://masen.dev",
-  projects: [ProjectPortfolio]
+  projects: [ProjectPortfolio, ProjectFrontendApplication, ProjectSuggestionsBot, ProjectBackendApplication]
 };
 
 // src/(mangofx)/spiciest_bot.ts
@@ -542,7 +974,10 @@ var projects = [
   ProjectFoldBot,
   ProjectHypixelStatsSpreadsheet,
   ProjectSpiciestBot,
-  ProjectPortfolio
+  ProjectPortfolio,
+  ProjectFrontendApplication,
+  ProjectSuggestionsBot,
+  ProjectBackendApplication
 ].map(projectWithImages);
 function slugToClient(slug) {
   const client = clients.find((c) => c.slug == slug);

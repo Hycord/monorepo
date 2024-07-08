@@ -10,7 +10,10 @@ export type TagSchema =
   | "React"
   | "Next.js"
   | "Vercel"
-  | "Local";
+  | "Local"
+  | "Backend"
+  | "MariaDB"
+  | "Prisma";
 
 export type Content =
   | {

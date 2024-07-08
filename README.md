@@ -8,6 +8,7 @@ All packages are published under the @ignhycord prefix on NPM
 - `test`: A basic app used to test and debug packages
 - `@hycord/logger`: a basic logging library shared by all of my applications and packages
 - `@hycord/math`: a basic math library shared by all of my applications and packages
+- `@hycord/discord`: a fully featured discord API library for my bots
 - `@hycord/neural`: a basic neural network library to mess around with AI
 - `@hycord/image`: a basic canvas handling API which simplifies creating, drawing, and rendering canvases in node
 - `@hycord/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
@@ -35,6 +36,7 @@ pnpm build
 ### Develop
 
 To develop all apps and packages, run the following command:
+(ensure you run `git submodule update --init --recursive`)
 
 ```
 pnpm dev

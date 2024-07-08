@@ -30,7 +30,7 @@ function parseContent(c: Content): React.ReactNode {
         <div className="flex flex-col gap-2 pl-4">
           {c.content.map((b) => (
             <div className="flex flex-row gap-2">
-              <p>{">"}</p>
+              <p>{"\t"}</p>
               {b}
             </div>
           ))}

@@ -19,7 +19,10 @@ import { ProjectHypixelStatsSpreadsheet } from "./(darthmrpoe)/hypixel_stats_spr
 import { ProjectKCFDWebsite } from "./(kcfd)/kcfd_website";
 import { ProjectLOSEBot } from "./(docn)/lose_bot";
 import { ProjectPortfolio } from "./(hycord)/portfolio";
+import { ProjectFrontendApplication } from "./(hycord)/premier-studios-frontend";
 import { ProjectSpiciestBot } from "./(mangofx)/spiciest_bot";
+import { ProjectSuggestionsBot } from "./(hycord)/premier-studios-suggestions-bot";
+import { ProjectBackendApplication } from "./(hycord)/premier-studios-backend";
 
 function projectWithImages(project: ProjectSchema): {
   project: ProjectSchema;
@@ -52,6 +55,9 @@ export const projects: { project: ProjectSchema; images: string[] }[] = [
   ProjectHypixelStatsSpreadsheet,
   ProjectSpiciestBot,
   ProjectPortfolio,
+  ProjectFrontendApplication,
+  ProjectSuggestionsBot,
+  ProjectBackendApplication
 ].map(projectWithImages);
 
 export function slugToClient(slug: ClientSlug):

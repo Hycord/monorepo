@@ -1,5 +1,8 @@
 import { ClientSchema } from "..";
 import { ProjectPortfolio } from "./portfolio";
+import { ProjectBackendApplication } from "./premier-studios-backend";
+import {ProjectFrontendApplication} from "./premier-studios-frontend"
+import { ProjectSuggestionsBot } from "./premier-studios-suggestions-bot";
 
 export default {
   slug: "hycord",
@@ -11,5 +14,5 @@ export default {
   discord: "https://discord.gg/9f7WbbvPP7",
   github: "https://github.com/hycord",
   website: "https://masen.dev",
-  projects: [ProjectPortfolio],
+  projects: [ProjectPortfolio,ProjectFrontendApplication,ProjectSuggestionsBot,ProjectBackendApplication],
 } as ClientSchema;

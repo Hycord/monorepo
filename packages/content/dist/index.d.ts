@@ -1,7 +1,7 @@
 type ClientSlug = "darthmrpoe" | "docn" | "fluffans" | "hycord" | "kcfd" | "mangofx" | "qubistic";
 
 type LanguageSchema = "Typescript";
-type TagSchema = "Discord" | "Web" | "Docker" | "MySQL" | "PostgreSQL" | "React" | "Next.js" | "Vercel" | "Local";
+type TagSchema = "Discord" | "Web" | "Docker" | "MySQL" | "PostgreSQL" | "React" | "Next.js" | "Vercel" | "Local" | "Backend" | "MariaDB" | "Prisma";
 type Content = {
     type?: "title" | "subtitle";
     content: string | (string | Content)[];
