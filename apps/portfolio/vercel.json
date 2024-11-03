@@ -3,6 +3,9 @@
       {
         "source": "/a/:match*",
         "destination": "https: //cdn.masen.dev/:match*"
+      }, {
+       “source”: “/discord”,
+       “destination”: “https://discord.gg/UEYdeWUp9b”
       }
     ]
   }
